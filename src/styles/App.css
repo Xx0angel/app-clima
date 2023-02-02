@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
 .navbar {
@@ -15,10 +17,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
   position: relative;
   color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.navbar .navbar__title {
+  font-size: 1.5rem;
+}
+
+.navbar .navbar__description {
+  font-size: 0.8rem;
 }
 
 .App {
@@ -43,22 +54,183 @@
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background-image: url(../assets/fondo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(../assets/fondo.jpg) no-repeat center center/cover;
 }
 
 .App .App__box {
   width: 100%;
-  height: 70vh;
+  min-height: 80vh;
   max-width: 700px;
   margin: 0 auto;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card {
+  margin-bottom: 3rem;
+}
+
+.card .card__search {
+  display: block;
+  text-align: center;
+  min-height: 42px;
+  margin-bottom: 1rem;
+}
+
+.card .card__search .card__search-input {
+  display: inline;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 0;
+  margin-right: 0.5rem;
+}
+
+.card .card__search .card__search-input:focus {
+  border: 0;
+  outline: 0;
+}
+
+.card .card__search .card__search-icon {
+  color: #ffffff;
+}
+
+.card .date {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.card .date .date__local {
+  text-align: center;
+}
+
+.card .card__box {
+  position: relative;
+}
+
+.card .card__box .card__content {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card__box .card__content .card__weather {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+  max-height: 35vh;
+  padding-top: 1rem;
+}
+
+.card .card__box .card__content .card__weather .card__weather-city {
+  font-size: 1.5rem;
+}
+
+.card .card__box .card__content .card__weather .card__weather-temp {
+  font-size: 5rem;
+}
+
+.card .card__box .card__content .card__weather .card__weather-main {
+  position: absolute;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  right: 0;
+  bottom: 25px;
+}
+
+.card .card__box .general__info .info {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.card .card__box .card__info {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  min-height: 300px;
+  max-height: 40vh;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.weather__info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.weather__info-box .weather__info-title {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.weather__info-box .weather__info-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .App .App__box {
+    width: 100%;
+    height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .App .App__box {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
 }
 /*# sourceMappingURL=App.css.map */
