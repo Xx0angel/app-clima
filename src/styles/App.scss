@@ -71,8 +71,12 @@ $white-color: #ffffff;
                 outline: 0;
             }
         }
-        .card__search-icon {
-            color: $white-color;
+        .card__search-button{
+            background-color: transparent;
+            border: 0;
+            ion-icon {
+                color: $white-color;
+            }
         }
     }
     .date {
@@ -160,5 +164,6 @@ $white-color: #ffffff;
         font-size: 1.5rem;
     }
 }
+
 
 @import "mobile";
