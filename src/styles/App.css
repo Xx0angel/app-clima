@@ -34,7 +34,7 @@
 
 .App {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,17 +55,6 @@
   height: 100vh;
   z-index: -1;
   background: url(../assets/fondo.jpg) no-repeat center center/cover;
-}
-
-.App .App__box {
-  width: 100%;
-  min-height: 80vh;
-  max-width: 700px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .card {
@@ -231,6 +220,108 @@
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    width: 100%;
+    max-height: 80vh;
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  .card {
+    margin-bottom: 3rem;
+  }
+  .card .card__search {
+    display: block;
+    text-align: center;
+    min-height: 42px;
+    margin-bottom: 1rem;
+  }
+  .card .card__search .card__search-input {
+    display: inline;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 0;
+    margin-right: 0.5rem;
+  }
+  .card .card__search .card__search-input:focus {
+    border: 0;
+    outline: 0;
+  }
+  .card .card__search .card__search-icon {
+    color: #ffffff;
+  }
+  .card .date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .card .date .date__local {
+    text-align: center;
+  }
+  .card .card__box {
+    position: relative;
+  }
+  .card .card__box .card__content {
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card .card__box .card__content .card__weather {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    max-height: 35vh;
+    padding-top: 1rem;
+  }
+  .card .card__box .card__content .card__weather .card__weather-city {
+    font-size: 1.5rem;
+  }
+  .card .card__box .card__content .card__weather .card__weather-temp {
+    font-size: 5rem;
+  }
+  .card .card__box .card__content .card__weather .card__weather-main {
+    position: absolute;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    right: 0;
+    bottom: 25px;
+  }
+  .card .card__box .card__info {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    min-height: 300px;
+    max-height: 40vh;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 /*# sourceMappingURL=App.css.map */

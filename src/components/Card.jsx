@@ -1,13 +1,11 @@
 import '../styles/App.css'
+import Form from './Form'
 import Weatherinfo from './Weatherinfo'
 
 function Card() {
     return (
         <div className="card">
-            <div className="card__search">
-                <input className="card__search-input" type="text" placeholder="Buscar Ciudad..." />
-                {/* <i className="uil uil-search card__search-icon"></i> */}
-            </div>
+            <Form/>
             <div className="date">
                 <p className='date__local'>Miercoles, 01 FEB 2023 | Hora local: 02:50 AM</p>
             </div>
@@ -30,7 +28,6 @@ function Card() {
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }

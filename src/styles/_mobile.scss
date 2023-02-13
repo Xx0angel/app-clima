@@ -21,6 +21,98 @@
             -moz-border-radius: 25px;
             -ms-border-radius: 25px;
             -o-border-radius: 25px;
+            width: 100%;
+            max-height: 80vh;
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    }
+
+    .card {
+        margin-bottom: 3rem;
+        .card__search {
+            display: block;
+            text-align: center;
+            min-height: 42px;
+            margin-bottom: 1rem;
+            .card__search-input {
+                display: inline;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                border: 0;
+                margin-right: 0.5rem;
+                &:focus {
+                    border: 0;
+                    outline: 0;
+                }
+            }
+            .card__search-icon {
+                color: $white-color;
+            }
+        }
+        .date {
+            color: rgba($white-color, $alpha: 0.8);
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+            .date__local {
+                text-align: center;
+            }
+        }
+        .card__box {
+            position: relative;
+    
+            .card__content {
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .card__weather {
+                    display: block;
+                    width: 100%;
+                    color: $white-color;
+                    position: relative;
+                    max-height: 35vh;
+                    padding-top: 1rem;
+                    .card__weather-city {
+                        font-size: 1.5rem;
+                    }
+                    .card__weather-temp {
+                        font-size: 5rem;
+                    }
+                    .card__weather-main {
+                        position: absolute;
+                        transform: rotate(270deg);
+                        -webkit-transform: rotate(270deg);
+                        -moz-transform: rotate(270deg);
+                        -ms-transform: rotate(270deg);
+                        -o-transform: rotate(270deg);
+                        right: 0;
+                        bottom: 25px;
+                    }
+                }
+            }
+            .card__info {
+                background: rgba(255, 255, 255, 0.25);
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+                min-height: 300px;
+                max-height: 40vh;
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+                backdrop-filter: blur(4px);
+            }
         }
     }
 }
